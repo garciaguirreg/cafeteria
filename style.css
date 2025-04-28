@@ -32,7 +32,7 @@ section {
 }
 
 h2 {
-    color: #558b2f; /* Un color verde para el tema de cafetería */
+    color: #558b2f; 
 }
 
 .button {
@@ -67,7 +67,7 @@ h2 {
 }
 
 .precio {
-    color: #d32f2f; /* Un color rojo para el precio */
+    color: #d32f2f; 
     font-weight: bold;
 }
 
@@ -79,4 +79,12 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
 }
