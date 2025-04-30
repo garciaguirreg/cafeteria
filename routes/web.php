@@ -1,36 +1,24 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NewsletterController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome'); // Esta es la ruta por defecto, puedes modificarla
-});
-
-// Ruta para mostrar el formulario de registro
+// Rutas existentes
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
-
-// Ruta para procesar el envío del formulario de registro
 Route::post('/register', [AuthController::class, 'register']);
-
-// Ruta para procesar la suscripción al boletín
 Route::post('/subscribe', [NewsletterController::class, 'subscribe'])->name('subscribe');
-
-// Opcional: Ruta para mostrar la página de suscripción al boletín
 Route::get('/newsletter/subscribe', function () {
     return view('newsletter.subscribe');
 })->name('newsletter.show');
 
-// Aquí puedes agregar más rutas para tu aplicación
+// Rutas para tus otras páginas
+Route::get('/menu', [PageController::class, 'menu'])->name('menu');
+Route::get('/crear_cuenta', [PageController::class, 'crearCuenta'])->name('crear_cuenta');
+Route::get('/novedades', [PageController::class, 'novedades'])->name('novedades');
+Route::get('/contacto', [PageController::class, 'contacto'])->name('contacto');
+
+// Otras rutas que puedas tener...

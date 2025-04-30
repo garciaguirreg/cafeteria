@@ -1,6 +1,6 @@
 const { createApp, ref } = Vue;
 
-const app = createApp({
+const app = Vue.createApp({
     data() {
         return {
             forms: {

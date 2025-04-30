@@ -9,9 +9,13 @@
 <body>
     <div id="app">
         <div class="container">
-            <register-form></register-form>
+        @include('index') {--
+
+        --}
+    
+           <register-form></register-form>
         </div>
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{--<script src="{{ asset('js/app.js') }}"></script>--}}
 </body>
 </html>

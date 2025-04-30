@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div id="app">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg bg-light">
@@ -23,19 +25,19 @@
                         <ul class="navbar-nav">
                             
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="menu.html">Menú</a>
+                            <a class="nav-link" href="{{ route('menu') }}">Menú</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="crear_cuenta.html">Crear Cuenta</a>
+                            <a class="nav-link" href="{{ route('crear_cuenta') }}">Crear Cuenta</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="novedades.html">Novedades y promociones</a>
+                            <a class="nav-link" href="{{ route('novedades') }}">Novedades y promociones</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="{{ route('contacto') }}">Contacto</a>
                             </li>
                         </ul>
                     </div>
@@ -44,7 +46,8 @@
         </div>
 
         <div class="container mt-4">
-            <section id="hero" class="jumbotron">
+            
+           <section id="hero" class="jumbotron">
                 
                 <h1 class="display-4">Bienvenido a MoonCafe</h1>
                 <p class="lead">Tu espacio ideal para disfrutar de un delicioso café.</p>
@@ -91,6 +94,7 @@
             <p>&copy; 2025 MoonCafe. Todos los derechos reservados.</p>
         </footer>
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
